@@ -1,0 +1,46 @@
+using System;
+using System.IO;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace CSharp_Shell
+{
+
+    public static class Program 
+    {
+        public static void Main() 
+        {
+         Nums();
+         
+        }
+        static void Nums()
+        {
+        	int[] vetor = new int[2];
+           for(int index = 0; index < 2; index++)
+           {
+           	vetor[index] = int.Parse(Console.ReadLine());
+           }
+           if(vetor[0] < vetor[1])
+           {
+           int cont = vetor[0];
+           while(cont <= vetor[1])
+           {
+           	Console.WriteLine(vetor[0]);
+           	cont++;
+           	vetor[0]++;
+           }
+           }
+           else
+           {
+           	int cont = vetor[1];
+           while(cont <= vetor[0])
+           {
+           	Console.WriteLine(vetor[1]);
+           	cont++;
+           	vetor[1]++;
+           }
+           Console.ReadLine();
+           }  
+        }
+    }
+}
